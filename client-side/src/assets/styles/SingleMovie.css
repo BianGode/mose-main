@@ -1,0 +1,94 @@
+.single-movie-wrap {
+  display: flex;
+  gap: 2rem;
+}
+.single-movie-wrap * {
+  color: white;
+}
+.single-movie-wrap .single-movie-cast-wrap {
+  z-index: 100;
+}
+.single-movie-wrap .single-movie-cast-wrap img {
+  height: 15rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .single-movie-wrap {
+    flex-direction: column;
+  }
+  .single-movie-wrap .single-movie-content-wrap img {
+    width: 40%;
+  }
+  .single-movie-wrap .single-movie-content-wrap {
+    text-align: center;
+  }
+  .single-movie-wrap .single-movie-cast-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .single-movie-wrap .single-movie-cast-wrap .single-movie-single-cast {
+    border: 2px solid yellow;
+    display: flex;
+    flex-direction: row;
+    z-index: 10;
+  }
+  .single-movie-wrap .single-movie-cast-wrap .single-movie-single-cast .cast-name-role-wrap {
+    margin-left: 1rem;
+  }
+  .single-movie-wrap .single-movie-cast-wrap .single-movie-single-cast .cast-name-role-wrap :nth-child(odd) {
+    font-weight: 800;
+  }
+}
+.custom-hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-hr .ball {
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: 2px solid white;
+  border-radius: 180px;
+}
+.custom-hr .hr {
+  width: 80%;
+  background-color: white;
+  height: 2px;
+}
+
+@media only screen and (min-width: 900px) {
+  .single-movie-wrap {
+    flex-direction: column;
+  }
+  .single-movie-wrap .single-movie-content-wrap {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 1.8rem - 1.8rem);
+  }
+  .single-movie-wrap .single-movie-content-wrap .single-movie {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .single-movie-wrap .single-movie-content-wrap .single-movie .single-movie-left {
+    display: flex;
+    flex-direction: column;
+  }
+  .single-movie-wrap .single-movie-content-wrap .single-movie .single-movie-right {
+    text-align: center;
+  }
+  .single-movie-wrap .single-movie-content-wrap .single-movie .single-movie-right .single-movie-poster {
+    height: 70vh;
+  }
+  .single-movie-wrap .single-movie-cast-wrap {
+    width: 90%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 0 auto;
+  }
+  .single-movie-wrap .single-movie-cast-wrap .single-movie-single-cast {
+    border: 1px solid orange;
+    text-align: center;
+  }
+}/*# sourceMappingURL=SingleMovie.css.map */

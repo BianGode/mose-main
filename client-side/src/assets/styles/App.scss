@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=SUSE:wght@100..800&display=swap");
+
+@keyframes sidebarSlideOpen {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes sidebarSlideClose {
+  from {
+    width: 70%;
+  }
+  to {
+    width: 0%;
+  }
+}
+@keyframes searchInputOpen {
+  from {
+    width: 0;
+  }
+  to {
+    width: 8rem;
+  }
+}
+@keyframes searchInputClose {
+  from {
+    width: 8rem;
+  }
+  to {
+    width: 0;
+  }
+}
+
+// colors
+$ogMain: rgb(70, 50, 2);
+$overlayColors: rgba(70, 50, 2);
+$antique-white: #eeece0;
+$green: #acc0b5;
+$beige: #d0cbb7;
+$concrete: #b9b9b1;
+
+$yellow: rgba(112, 99, 56, 0.9);
+$red: rgb(184, 0, 31, 0.9);
+$green: rgba(99, 86, 63, 0.9);
+$blue: rgba(0, 0, 255, 0.9);
+$lightblue: rgb(0, 183, 0.9);
+$purple: rgb(116, 8, 189);
+$black: rgba(0, 0, 0, 1);
+
+@keyframes testAnimation {
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 0%;
+    // background-size: 10% 10%;
+  }
+  25% {
+    background-position: 50% 50%;
+  }
+  50% {
+    background-position: 100% 100%;
+    // background-size: 60% 60%;
+  }
+  75% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 0%, 0%;
+    // background-size: 10% 10%;
+  }
+}
+@keyframes gradientThree {
+  0% {
+    background-position: 0% 0%;
+    // background-size: 100%;
+  }
+  10% {
+    background-position: 20% 20%;
+  }
+  20% {
+    background-position: 40% 40%;
+  }
+  30% {
+    background-position: 60% 60%;
+  }
+  40% {
+    background-position: 80% 80%;
+  }
+  50% {
+    background-position: 100% 100%;
+    // background-size: 10% 10%;
+  }
+  60% {
+    background-position: 80% 80%;
+  }
+  70% {
+    background-position: 60% 60%;
+  }
+  80% {
+    background-position: 40% 40%;
+  }
+  90% {
+    background-position: 20% 20%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+// $main-text: #
+@keyframes Animation {
+  0% {
+    background-position: 10% 10%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 10%;
+  }
+}
+
+@keyframes AnimationTwo {
+  0% {
+    background-image: linear-gradient(-45deg, $beige, black 60%, $beige);
+  }
+  50% {
+    background-image: linear-gradient(to right, $beige, black 60%, $beige);
+  }
+  100% {
+    background-image: linear-gradient(45deg, $beige, black 60%, $beige);
+  }
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  // font-style: normal;
+}
+body {
+  background-color: rgb(31, 45, 66);
+}
+
+// in here are all the elements that need different coloring
+// style for the themes. maybe put this in another file
+#video-overlay {
+  // transition: all 1s ease;
+  background-size: 1000%;
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 1),
+    $blue,
+    rgba(0, 0, 0, 1),
+    $yellow,
+    rgba(0, 0, 0, 1),
+    $red,
+    rgba(0, 0, 0, 1),
+    $green,
+    rgba(0, 0, 0, 1),
+    $lightblue,
+    rgba(0, 0, 0, 1),
+    $purple
+  );
+}
+.particle-content-container {
+  position: relative;
+  #tsparticles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    // height: 100% !important;
+    canvas {
+      // z-index: 10;
+      // position: absolute;
+      // top: 0;
+      // height: 100%;
+    }
+  }
+}
+.original {
+  svg {
+    color: rgb(216, 216, 140);
+  }
+  .selectTheme {
+    background-color: lightblue;
+  }
+  header.desktop {
+    border-bottom: 2px dashed white;
+    color: antiquewhite;
+    z-index: 10;
+    a {
+    }
+    a:visited {
+      color: antiquewhite;
+    }
+    a:hover {
+    }
+  }
+  .outlet-wrapper {
+    .home-wrapper {
+      .video-wrapper {
+        .video-overlay {
+          // background-position: 0% 0%;
+          // border-radius: 40px;
+          // opacity: 0.8;
+          animation: gradientThree 60s linear infinite;
+          // background-position: 0% 0%;
+          // height: 100%;
+        }
+      }
+      .search-home-wrapper {
+        .search-home {
+          h1 {
+            color: white;
+          }
+          .search-input-wrap {
+            background-color: #3e424e;
+            // padding: 5px 10px;
+            height: 2rem;
+            .search-icon-home {
+              height: 1.8rem;
+            }
+            input {
+              // height: 100%;
+              // max-height: 100%;
+              // border: none;
+              // background-color: inherit;
+              // width: 300px;
+              background-color: #3e424e;
+              color: #d8d88c;
+              border: none;
+              border-left: 1px solid;
+              height: 100%;
+              outline: none;
+              // color: #3E424E;
+              // outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .sidebar {
+    border-bottom: 100vh solid antiquewhite;
+    #sideBarLinks {
+      a {
+        color: rgb(70, 50, 2);
+      }
+      p {
+        color: rgb(177, 128, 4);
+      }
+    }
+  }
+}
+.light {
+  .sidebar {
+  }
+}
+.dark {
+  .sidebar {
+  }
+}
+
+body {
+  margin: 0;
+}
+.selectTheme {
+  width: 100%;
+  height: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+  position: relative;
+  // padding: 10px;
+  .box {
+    height: 90%;
+    width: 30px;
+    border: 2px dotted blue;
+  }
+  .box.original {
+    background-color: gray;
+  }
+  .box.black {
+    background-color: black;
+  }
+  .box.white {
+    background-color: white;
+  }
+}
+
+footer {
+  width: 100%;
+  border: 2px dashed blue;
+  height: 200px;
+  z-index: 11;
+  position: relative;
+  background-color: black;
+}
+
+// header search style
+.search-header {
+  display: flex;
+  align-items: center;
+  border: 3px solid black;
+  width: min-content;
+  .search-icon {
+    // border: 3px solid black;
+    border-right: none;
+    height: 16px;
+  }
+  .search-input {
+    // border: 3px solid black;
+    border: 0;
+    // height: inherit;
+    outline: none;
+    box-shadow: 0;
+    width: 0;
+    opacity: 0;
+    transition: 200ms;
+  }
+  .search-input.active {
+    width: 8rem;
+    opacity: 1;
+    // animation: searchInputOpen 0.5s ease;
+    transition: 200ms;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  header.mobile {
+    background-color: black;
+    display: flex;
+    // make hamburger icon sticky to one place
+    #sidebar-open-icon {
+      top: 2.5rem;
+      left: 1rem;
+      position: fixed;
+      padding: 5px;
+      color: black;
+      border: 5px solid white;
+      border-radius: 180px;
+      background: white;
+      z-index: 90;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+    .sidebar {
+      z-index: 100;
+
+      height: 0;
+      // border: 2px solid blanchedalmond;
+      border-right: 100px solid transparent;
+      width: 70%;
+      // background-color: white;
+      flex-direction: column;
+      gap: 2rem;
+
+      position: fixed;
+      // top: 0;
+      left: -100%;
+      transition: 500ms;
+      display: flex;
+      // * {
+      //   display: none;
+      // }
+      #sidebar-close-icon {
+        width: max-content;
+        padding: 10px;
+      }
+      #sideBarLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-left: 10px;
+        .sidebar-link-singlewrap {
+          display: flex;
+          flex-direction: column;
+          a {
+            text-decoration: none;
+            font-weight: 300;
+          }
+          p {
+            margin: 0;
+            transform: rotateX(180deg);
+            line-height: 5px;
+          }
+        }
+      }
+    }
+    .sidebar.active {
+      left: 0;
+      transition: 500ms;
+    }
+  }
+  .outlet-wrapper {
+    .home-wrapper {
+      .search-home-wrapper {
+        .search-home {
+          width: 90%;
+        }
+      }
+    }
+  }
+  header.desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  header.desktop {
+    display: flex;
+    // padding-left: 10%;
+    gap: 3rem;
+    padding: 10px;
+    position: sticky;
+    // z-index: 3;
+    img {
+      padding: 5px;
+    }
+    .headerLinks {
+      display: flex;
+      gap: 2rem;
+      a {
+        text-decoration: none;
+        // transition: all 0.2s ease;
+        padding: 5px;
+      }
+      a:hover {
+        font-weight: 600;
+        // transition: all 1s ease;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  header.mobile {
+    display: none;
+  }
+}

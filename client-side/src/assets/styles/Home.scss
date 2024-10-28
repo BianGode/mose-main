@@ -1,0 +1,266 @@
+@media only screen and (min-width: 900px) {
+  .self-overwrite-size {
+    height: calc(100vh - 1.8rem - 52px) !important;
+  }
+  .outlet-wrapper {
+    .home-wrapper {
+      .video-wrapper {
+        .video-player {
+          .vjs-tech {
+            object-fit: cover;
+          }
+        }
+        .video-overlay {
+          position: absolute;
+          left: 0;
+          top: calc(1.8rem);
+          height: calc(100vh - 1.8rem) !important;
+          width: 100%;
+        }
+      }
+      // move this to another scss file called mediaqueries
+      .search-home-wrapper {
+        position: absolute;
+        left: 0;
+        top: 1.8rem;
+        height: calc(100vh - 1.8rem) !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // align-items: center;
+        .search-home {
+          // height: 50%;
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+          align-items: center;
+          flex-direction: column;
+          // width: 0%;
+          // height: 20%;
+          // background-color: rgba(0, 0, 0, 0.5);
+          // transition: all 1s ease;
+          z-index: 20;
+          border-radius: 20px;
+          // padding-bottom: 10rem;
+          h1 {
+            width: max-content;
+          }
+          .search-input-wrap {
+            display: flex;
+            svg {
+              // padding: 5px;
+              height: 100%;
+            }
+            .search-input {
+              font-size: 100%;
+              width: 15rem;
+              border: 1px solid transparent;
+            }
+            .search-input:focus {
+              outline: 0;
+            }
+          }
+        }
+      }
+      .result-wrapper {
+        // margin: 2rem;
+        background: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.3) 5%,
+          rgba(0, 0, 0, 0.5),
+          rgba(255, 255, 255, 0.3) 95%
+        );
+        padding: 1rem;
+        .result-card {
+          flex-direction: column;
+          .result-home-p {
+            flex: 1;
+          }
+          .result-image-wrap {
+            img {
+              width: 10rem;
+            }
+            .result-overlay {
+            }
+          }
+          .result-image-mob {
+            width: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .self-overwrite-size {
+    height: calc(100vh - 1.8rem);
+  }
+  .outlet-wrapper {
+    .home-wrapper {
+      .search-home-wrapper {
+        .search-home {
+          h1 {
+            width: 80vw;
+            text-align: center;
+            // font-size: 7vw;
+          }
+        }
+      }
+      .result-wrapper {
+        flex-direction: column;
+        align-items: center;
+        .result-card {
+          background: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.3) 5%,
+            rgba(0, 0, 0, 0.5),
+            rgba(255, 255, 255, 0.3)
+          );
+          width: 100%;
+          // padding: 1rem 5rem;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          gap: 0.5rem;
+          padding: 1rem;
+          .result-image-mob {
+            height: 10rem;
+            // width: 12rem;
+          }
+          .year-title-wrap {
+            max-width: 35%;
+          }
+          .vote-wrapper {
+            // height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // text-align: center;
+            // gap: 1rem;
+            margin: 10px;
+            p {
+              margin: 0;
+              height: 1rem;
+            }
+            svg {
+              height: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.self-overwrite-size {
+  max-width: 100%;
+}
+.outlet-wrapper {
+  .home-wrapper {
+    z-index: 2;
+    // height: 700px;
+    width: 100vw;
+    .video-wrapper {
+      .video-player {
+        .vjs-tech {
+          object-fit: cover;
+        }
+      }
+      .video-overlay {
+        position: absolute;
+        left: 0;
+        top: calc(1.8rem);
+        height: calc(100vh - 1.8rem) !important;
+        width: 100%;
+      }
+    }
+    // move this to another scss file called mediaqueries
+    .search-home-wrapper {
+      position: absolute;
+      left: 0;
+      top: 1.8rem;
+
+      height: calc(100vh - 1.8rem) !important;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 20rem;
+      // align-items: center;
+      .search-home {
+        // height: 50%;
+
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+        width: 0%;
+        // height: 20%;
+        // background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.5s ease;
+
+        // transition: width 0.5s, height 0.5s, background-color, 0.5s;
+        // transition-timing-function: ease;
+        z-index: 20;
+        border-radius: 20px;
+        h1 {
+          margin: 0;
+        }
+        // padding-bottom: 10rem;
+        .search-input-wrap {
+          display: flex;
+          align-items: center;
+          padding: 5px;
+          svg {
+            // padding: 5px;
+          }
+          .search-input {
+            font-size: 100%;
+            width: 15rem;
+            // height: 2rem;
+          }
+          .search-input:focus {
+            outline: 0;
+          }
+        }
+      }
+      .search-home.active {
+        // width: min-content;
+        padding: 2rem 10rem;
+        margin: 0 auto;
+        // transition: all 0.5s ease;
+        // height: 60%;
+        // border-radius: 15px;
+        // border: 4px dashed white;
+      }
+    }
+    .result-wrapper {
+      // width: 90%;
+      display: flex;
+      overflow-x: scroll;
+      margin: 0 auto;
+      margin-top: -28rem;
+      position: relative;
+      z-index: 100;
+      gap: 2rem;
+      color: white;
+      .result-card {
+        display: flex;
+        // flex-direction: column;
+        text-align: center;
+        // align-items: center;
+        
+        img {
+          // width: 70%;
+          // flex: 1;
+        }
+        .result-image-wrap {
+          .result-overlay {
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+-volledig responsive
+-begrijpen welke hooks en hoe ze worden gebruikt
+-Thema switcher
+-

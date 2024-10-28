@@ -1,0 +1,115 @@
+.single-movie-wrap {
+  display: flex;
+  gap: 2rem;
+  // color white display test
+  * {
+    color: white;
+  }
+
+  .single-movie-cast-wrap {
+    z-index: 100;
+    img {
+      height: 15rem;
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .single-movie-wrap {
+    flex-direction: column;
+    .single-movie-content-wrap {
+      img {
+        width: 40%;
+      }
+    }
+    .single-movie-content-wrap {
+      text-align: center;
+      .title {
+      }
+    }
+    .single-movie-cast-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      .single-movie-single-cast {
+        border: 2px solid yellow;
+        display: flex;
+        flex-direction: row;
+        z-index: 10;
+        .cast-name-role-wrap {
+          // display: grid;
+          // grid-template-columns: 50% 50%;
+          margin-left: 1rem;
+
+          :nth-child(odd) {
+            font-weight: 800;
+          }
+        }
+      }
+    }
+  }
+}
+
+// custom made horizontal ruler with dots at the end
+.custom-hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .ball {
+    width: 1rem;
+    height: 1rem;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 180px;
+  }
+  .left {
+  }
+  .right {
+  }
+  .hr {
+    width: 80%;
+    background-color: white;
+    height: 2px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .single-movie-wrap {
+    flex-direction: column;
+
+    .single-movie-content-wrap {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - 1.8rem - 1.8rem);
+      .single-movie {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        .single-movie-left {
+          display: flex;
+          flex-direction: column;
+          .single-movie-genres {
+          }
+        }
+        .single-movie-right {
+          text-align: center;
+          .single-movie-poster {
+            height: 70vh;
+          }
+        }
+      }
+    }
+    .single-movie-cast-wrap {
+      width: 90%;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      margin: 0 auto;
+      .single-movie-single-cast {
+        // text-align: center;
+        border: 1px solid orange;
+        text-align: center;
+        .cast-name-role-wrap {
+          // display: flex;
+        }
+      }
+    }
+  }
+}

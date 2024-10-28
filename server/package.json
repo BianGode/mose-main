@@ -1,0 +1,23 @@
+{
+  "name": "fullstack-prac",
+  "version": "1.0.0",
+  "description": "moviedb seacher prac",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.5",
+    "vite": "^5.3.4"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
