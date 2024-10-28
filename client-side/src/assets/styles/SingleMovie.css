@@ -5,6 +5,9 @@
 .single-movie-wrap * {
   color: white;
 }
+.single-movie-wrap .single-movie-images {
+  display: flex;
+}
 .single-movie-wrap .single-movie-cast-wrap {
   z-index: 100;
 }
@@ -21,6 +24,9 @@
   }
   .single-movie-wrap .single-movie-content-wrap {
     text-align: center;
+  }
+  .single-movie-wrap .single-movie-images {
+    flex-direction: column;
   }
   .single-movie-wrap .single-movie-cast-wrap {
     display: flex;
@@ -80,6 +86,9 @@
   }
   .single-movie-wrap .single-movie-content-wrap .single-movie .single-movie-right .single-movie-poster {
     height: 70vh;
+  }
+  .single-movie-wrap .single-movie-images {
+    flex-direction: row;
   }
   .single-movie-wrap .single-movie-cast-wrap {
     width: 90%;

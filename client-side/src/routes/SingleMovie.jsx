@@ -88,9 +88,10 @@ function SingleMovie() {
           <div className="single-movie-images">
             {movieData.images ? (
               <>
+              {/* replace all the singlemovieimages map with a filter and splice to load only 1 image */}
               { movieData.images.backdrops ?
                 <div className="single-movie-images-backdrops">
-                  {movieData.images.backdrops.slice(0,2).map((backdrop, inx) => {
+                  {movieData.images.backdrops.slice(0,1).map((backdrop, inx) => {
                     return (
                       <img key={inx}
                         src={
@@ -103,7 +104,7 @@ function SingleMovie() {
                 </div> : null}
                 {movieData.images.logos.length > 0 ?
                 <div className="single-movie-images-logos">
-                  {movieData.images.logos.slice(0,2).map((logo, inx) => {
+                  {movieData.images.logos.slice(0,1).map((logo, inx) => {
                     return (
                       <img
                         key={inx}
@@ -117,7 +118,7 @@ function SingleMovie() {
                 </div> : <p>No Logos</p>}
                 {movieData.images.posters ?
                 <div className="single-movie-images-posters">
-                  {movieData.images.posters.slice(0,2).map((poster, inx) => {
+                  {movieData.images.posters.slice(0,1).map((poster, inx) => {
                     return (
                       <img
                       key={inx}

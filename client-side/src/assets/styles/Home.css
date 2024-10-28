@@ -42,12 +42,12 @@
   .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap svg {
     height: 100%;
   }
-  .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap input {
+  .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-input {
     font-size: 100%;
     width: 15rem;
     border: 1px solid transparent;
   }
-  .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap input:focus {
+  .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-input:focus {
     outline: 0;
   }
   .outlet-wrapper .home-wrapper .result-wrapper {
@@ -157,11 +157,11 @@
   align-items: center;
   padding: 5px;
 }
-.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap input {
+.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-input {
   font-size: 100%;
   width: 15rem;
 }
-.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap input:focus {
+.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-input:focus {
   outline: 0;
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home.active {

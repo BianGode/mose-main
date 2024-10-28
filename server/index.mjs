@@ -123,7 +123,7 @@ app.get("/singleMovie", (req, res) => {
     }).then(() => {
       axios.get("https://api.themoviedb.org/3/movie/" + singleMovieId + "/images?api_key=" + apiKey)
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data.backdrops);
         movieData.images = res.data
       }).catch((err) => {
         console.log(err);     

@@ -6,6 +6,9 @@
     color: white;
   }
 
+  .single-movie-images {
+    display: flex;
+  }
   .single-movie-cast-wrap {
     z-index: 100;
     img {
@@ -25,6 +28,9 @@
       text-align: center;
       .title {
       }
+    }
+    .single-movie-images {
+      flex-direction: column;
     }
     .single-movie-cast-wrap {
       display: flex;
@@ -96,6 +102,9 @@
           }
         }
       }
+    }
+    .single-movie-images {
+      flex-direction: row;
     }
     .single-movie-cast-wrap {
       width: 90%;
