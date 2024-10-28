@@ -7,10 +7,11 @@ function SingleMovie() {
   const [movieData, setMovieData] = useState("");
   const location = useLocation();
   // console.log(location.pathname.split('/')[2]);
-  
-  const id = location.state ? location.state.id : location.pathname.split('/')[2];
-  const translateTo = location.state ? location.state.translateTo : 'en';
 
+  const id = location.state
+    ? location.state.id
+    : location.pathname.split("/")[2];
+  const translateTo = location.state ? location.state.translateTo : "en";
 
   useEffect(() => {
     getSingleMovie();
@@ -21,7 +22,7 @@ function SingleMovie() {
       .get("http://localhost:5000/singleMovie", {
         params: {
           id: id,
-          translateTo: translateTo
+          translateTo: translateTo,
         },
       })
       .then((result) => {
@@ -44,8 +45,8 @@ function SingleMovie() {
                   <div className="single-movie-left">
                     <p>{movieData.movieDetails.overview}</p>
                     <div className="single-movie-genres">
-                      {movieData.movieDetails.genres.map((genre) => {
-                        return <p>{genre.name}</p>;
+                      {movieData.movieDetails.genres.map((genre, inx) => {
+                        return <p key={inx}>{genre.name}</p>;
                       })}
                     </div>
                   </div>
@@ -77,22 +78,70 @@ function SingleMovie() {
                 <p>{movieData.movieDetails.overview}</p>
 
                 <div className="single-movie-genres">
-                  {movieData.movieDetails.genres.map((genre) => {
-                    return <p>{genre.name}</p>;
+                  {movieData.movieDetails.genres.map((genre, inx) => {
+                    return <p key={inx}>{genre.name}</p>;
                   })}
                 </div>
               </>
             )}
           </div>
+          <div className="single-movie-images">
+            {movieData.images ? (
+              <>
+              { movieData.images.backdrops ?
+                <div className="single-movie-images-backdrops">
+                  {movieData.images.backdrops.slice(0,2).map((backdrop, inx) => {
+                    return (
+                      <img key={inx}
+                        src={
+                          "https://image.tmdb.org/t/p/w500/" +
+                          backdrop.file_path
+                        }
+                      />
+                    );
+                  })}
+                </div> : null}
+                {movieData.images.logos.length > 0 ?
+                <div className="single-movie-images-logos">
+                  {movieData.images.logos.slice(0,2).map((logo, inx) => {
+                    return (
+                      <img
+                        key={inx}
+                        src={
+                          "https://image.tmdb.org/t/p/w500/" +
+                          logo.file_path
+                        }
+                      />
+                    );
+                  })}
+                </div> : <p>No Logos</p>}
+                {movieData.images.posters ?
+                <div className="single-movie-images-posters">
+                  {movieData.images.posters.slice(0,2).map((poster, inx) => {
+                    return (
+                      <img
+                      key={inx}
+                        src={
+                          "https://image.tmdb.org/t/p/w500/" +
+                          poster.file_path
+                        }
+                      />
+                    );
+                  })}
+                </div> : <p> No posters</p>}
+              </>
+            ) : null}
+          </div>
+
           <div className="custom-hr">
             <div className="ball left"></div>
             <div className="hr"></div>
             <div className="ball right"></div>
           </div>
           <div className="single-movie-cast-wrap">
-            {movieData.cast.map((el) => {
+            {movieData.cast.map((el, inx) => {
               return (
-                <div className="single-movie-single-cast">
+                <div key={inx} className="single-movie-single-cast">
                   {/* <p style={{ color: "white" }}>{el}</p> */}
                   {/* <p style={{ color: "white" }}>{el}</p> */}
                   <p>{el.name}</p>
