@@ -122,6 +122,12 @@ app.get("/singleMovie", (req, res) => {
       movieData.movieDetails = movieDetails.data;
     }).then(() => {
       axios.get("https://api.themoviedb.org/3/movie/" + singleMovieId + "/images?language=" + translateTo + "&api_key=" + apiKey)
+      .then((res) => {
+        console.log(res.data);
+        movieData.images = res.data
+      }).catch((err) => {
+        console.log(err);     
+      })
     })
     .finally(() => {
       axios
