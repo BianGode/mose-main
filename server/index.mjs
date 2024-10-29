@@ -56,13 +56,14 @@ app.get("/search", (req, res) => {
   // search movie
   // 'https://api.themoviedb.org/3/search/movie?query=' + res.data +'&api_key=API_KEY'
   // if movie has more than 1 search result:
+  console.log(req.url);
+
   // loop through the results and display the title, poster_path, release_date and vote_average
   const inputUser = req.url.split('&')[0].split('=')[1]
   let translateTo;
   let original_language;
   original_language = req.url.split('&')[1].split('=')[1]
   translateTo = req.url.split('&')[2].split('=')[1]
-  // console.log(req);
   
 
   // console.log(inputUser, original_language, translateTo);

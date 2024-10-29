@@ -7,7 +7,10 @@ export const VideoJS = (props) => {
   const playerRef = useRef(null);
   const { options, onReady, setTimestamp1 } = props;
 
+  // FIX DEZE SHIT
+  
   useEffect(() => {
+
     // Make sure Video.js player is only initialized once
     if (!playerRef.current) {
       // The Video.js player needs to be _inside_ the component el for React 18 Strict Mode.
@@ -28,7 +31,7 @@ export const VideoJS = (props) => {
           videojs.log("player will dispose");
         });
         player.on("timeupdate", function () {
-          setTimestamp1(player.currentTime());
+          // setTimestamp1(player.currentTime());
         });
       }));
       // player.width(window.screen.width)

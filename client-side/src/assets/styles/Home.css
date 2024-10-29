@@ -75,6 +75,17 @@
     width: 80vw;
     text-align: center;
   }
+  .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-select-wrap {
+    display: flex;
+    gap: 5px;
+  }
+  .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-icon-wrap {
+    display: flex;
+  }
   .outlet-wrapper .home-wrapper .result-wrapper {
     flex-direction: column;
     align-items: center;
@@ -154,15 +165,22 @@
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap {
   display: flex;
+  gap: 1rem;
+  padding: 10px;
+  height: 5rem;
   align-items: center;
-  padding: 5px;
+}
+.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap input {
+  height: 100%;
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-input {
   font-size: 100%;
-  width: 15rem;
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .search-input:focus {
   outline: 0;
+}
+.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .translate, .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .country {
+  width: 10rem;
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home.active {
   padding: 2rem 10rem;

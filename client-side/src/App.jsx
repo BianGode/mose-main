@@ -27,30 +27,30 @@ function App() {
   const location = useLocation();
 
   // https://www.robinwieruch.de/react-hook-detect-click-outside-component/
-  const useOutsideClick = (callback) => {
-    const reference = useRef();
+  // const useOutsideClick = (callback) => {
+  //   const reference = useRef();
 
-    useEffect(() => {
-      const handleClick = (event) => {
-        if (reference.current && !reference.current.contains(event.target)) {
-          console.log(reference.current);
-          console.log(event.target);
-          console.log(reference.current.contains(event.target));
-          callback();
-        } else {
-          console.log("clicked inside!");
-        }
-      };
+  //   useEffect(() => {
+  //     const handleClick = (event) => {
+  //       if (reference.current && !reference.current.contains(event.target)) {
+  //         console.log(reference.current);
+  //         console.log(event.target);
+  //         console.log(reference.current.contains(event.target));
+  //         callback();
+  //       } else {
+  //         console.log("clicked inside!");
+  //       }
+  //     };
 
-      document.addEventListener("click", handleClick, true);
+  //     document.addEventListener("click", handleClick, true);
 
-      return () => {
-        document.removeEventListener("click", handleClick, true);
-      };
-    }, [reference]);
+  //     return () => {
+  //       document.removeEventListener("click", handleClick, true);
+  //     };
+  //   }, [reference]);
 
-    return reference;
-  };
+  //   return reference;
+  // };
 
   //searchBar component
   const HeaderSearch = ({ screenWidth }) => {
