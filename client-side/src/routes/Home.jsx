@@ -173,19 +173,23 @@ function Home() {
   const customStyles = {
     option: (defaultStyles, state) => ({
       ...defaultStyles,
-      color: 'black',
-      backgroundColor: state.isSelected ? "blue" : 'red',
-      
+      color: "#000",
+      backgroundColor: state.isSelected ? "#FDD8D6" : "#FDD8D6",
     }),
     control: (defaultStyles) => ({
-      ...defaultStyles,
+      display: "flex",
       // Notice how these are all CSS properties
-      backgroundColor: "red",
-      padding: "10px",
+      backgroundColor: "#94ACBF",
+      padding: "5px",
       border: "none",
       boxShadow: "none",
+      height: "2.4rem",
     }),
-    singleValue: (defaultStyles) => ({ ...defaultStyles, color: "#fff" })
+    singleValue: (defaultStyles) => ({ ...defaultStyles,  color: "white"}),
+    placeholder: (styles) => ({ 
+      ...styles,
+      color: '#FDD8D6',
+    })
   }
   // Add search input where select language, country and translation
 
@@ -225,6 +229,13 @@ function Home() {
               styles={customStyles}
               className="translate"
               placeholder="English"
+              theme={(theme) => ({
+                ...theme,
+                colors: {
+                  ...theme.colors,
+                  primary: "black",
+                }
+              })}
               />
               {/* <select
                 id="country-of-origin-select"

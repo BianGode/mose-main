@@ -142,6 +142,7 @@ $black: rgba(0, 0, 0, 1);
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   // font-style: normal;
+  box-sizing: border-box;
 }
 body {
   background-color: rgb(31, 45, 66);
@@ -238,7 +239,7 @@ body {
               // background-color: inherit;
               // width: 300px;
               background-color: #3e424e;
-              color: #d8d88c;
+              // color: #d8d88c;
               border: none;
               border-left: 1px solid;
               height: 100%;

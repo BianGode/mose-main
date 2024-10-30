@@ -231,7 +231,7 @@
           // align-items: center;
           gap: 1rem;
           padding: 10px;
-          height: 5rem;
+          // height: 5rem;
           align-items: center;
           input {
             height: 100%;
@@ -251,6 +251,10 @@
           .translate, .country {
             width: 10rem;
           }
+          
+        }
+        .search-input-wrap > * {
+          // max-height: 2rem;
         }
 
       }

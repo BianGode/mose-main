@@ -167,7 +167,6 @@
   display: flex;
   gap: 1rem;
   padding: 10px;
-  height: 5rem;
   align-items: center;
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap input {

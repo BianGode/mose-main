@@ -34,9 +34,6 @@ export const VideoJS = (props) => {
           // setTimestamp1(player.currentTime());
         });
       }));
-      // player.width(window.screen.width)
-      // player.height(window.screen.height - 48)
-      // player.videoHeight(700)
 
       // You could update an existing player in the `else` block here
       // on prop change, for example:
