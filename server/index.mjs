@@ -55,8 +55,8 @@ function quickSearch(arr) {
 app.get("/search", (req, res) => {
   // search movie
   // 'https://api.themoviedb.org/3/search/movie?query=' + res.data +'&api_key=API_KEY'
-  // if movie has more than 1 search result:
   console.log(req.url);
+  // if movie has more than 1 search result:
 
   // loop through the results and display the title, poster_path, release_date and vote_average
   const inputUser = req.url.split('&')[0].split('=')[1]
@@ -73,6 +73,7 @@ app.get("/search", (req, res) => {
   // 'https://api.themoviedb.org/3/movie/' + id + '?api_key=API_KEY'
   // WHAT STILL NEEDS TO BE DONE: add page counter with url &page=PAGENUMER
   async function searchReq() {
+
     try {
       // console.log(inputUser + " test");
       const result = await axios.get(

@@ -239,24 +239,22 @@
           .search-input {
             font-size: 100%;
             // width: 15rem;
-            // height: 2rem
-            ;
+            // height: 2rem;
           }
           // .country {
-            
           // }
           .search-input:focus {
             outline: 0;
           }
           .translate, .country {
             width: 10rem;
+            
+          }
+          .translate *{
+              z-index: 150;
           }
           
         }
-        .search-input-wrap > * {
-          // max-height: 2rem;
-        }
-
       }
       .search-home.active {
         // width: min-content;
@@ -275,7 +273,7 @@
       margin: 0 auto;
       margin-top: -28rem;
       position: relative;
-      z-index: 100;
+      // z-index: 100;
       gap: 2rem;
       color: white;
       .result-card {
@@ -293,6 +291,10 @@
           }
         }
       }
+    }
+    .result-wrapper * {
+      // z-index: 100;
+      position: relative;
     }
   }
 }

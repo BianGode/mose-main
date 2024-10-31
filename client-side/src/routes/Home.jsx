@@ -13,8 +13,8 @@ function Home() {
   const [searchRes, setSearchRes] = useState("");
   
   // state for react-selected
-  const [selectedOptionCountry, setSelectedOptionCountry] = useState('Country');
-  const [selectedOptionTranslate, setSelectedOptionTranslate] = useState('Translate');
+  const [selectedOptionCountry, setSelectedOptionCountry] = useState('en');
+  const [selectedOptionTranslate, setSelectedOptionTranslate] = useState('en');
 
   // const playerRef = useRef(null);
   // const [timestamp1, setTimestamp1] = useState(null);
@@ -96,8 +96,8 @@ function Home() {
       const response = await axios.get("http://localhost:5000/search", {
         params: {
           search: searchParam,
-          original_language: selectedOptionCountry.value,
-          translateTo: selectedOptionTranslate.value,
+          original_language: selectedOptionCountry,
+          translateTo: selectedOptionTranslate,
         },
       });
 
@@ -145,16 +145,23 @@ function Home() {
     }
   }, [selectedOptionCountry, selectedOptionTranslate]);
 
+  console.log(selectedOptionCountry);
+  
   function handleCountryOfOrigin(e) {
-    setCountryOfOrigin(e.target.value);
+    console.log(e.value);
+    
+    setSelectedOptionCountry(e.value);
     // console.log(search);
     // if (search) {
     //   searchReqClientSide(search);
     // }
   }
 
+  
   function handleTranslateTo(e) {
-    setTranslateTo(e.target.value);
+    setSelectedOptionTranslate(e.value);
+    console.log(e.target.value);
+
     // console.log(search);
 
     // if (search) {
@@ -216,7 +223,7 @@ function Home() {
                 onChange={(e) => searchCall(e)}
               />
               <Select defaultValue={"en"}
-              onChange={setSelectedOptionCountry}
+              onChange={(e) => handleCountryOfOrigin(e)}
               options={options}
               styles={customStyles}
               className="country"
@@ -224,7 +231,7 @@ function Home() {
               />
 
               <Select defaultValue={"en"}
-              onChange={setSelectedOptionTranslate}
+              onChange={(e) => handleTranslateTo(e)}
               options={options}
               styles={customStyles}
               className="translate"
