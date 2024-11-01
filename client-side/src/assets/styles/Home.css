@@ -157,7 +157,6 @@
   flex-direction: column;
   width: 0%;
   transition: all 0.5s ease;
-  z-index: 20;
   border-radius: 20px;
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home h1 {
@@ -181,8 +180,8 @@
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .translate, .outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .country {
   width: 10rem;
 }
-.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .translate * {
-  z-index: 150;
+.outlet-wrapper .home-wrapper .search-home-wrapper .search-home .search-input-wrap .translate > * {
+  z-index: 50;
 }
 .outlet-wrapper .home-wrapper .search-home-wrapper .search-home.active {
   padding: 2rem 10rem;
@@ -196,11 +195,13 @@
   position: relative;
   gap: 2rem;
   color: white;
+  z-index: 15;
 }
 .outlet-wrapper .home-wrapper .result-wrapper .result-card {
   display: flex;
   text-align: center;
 }
-.outlet-wrapper .home-wrapper .result-wrapper * {
+.outlet-wrapper .home-wrapper .result-wrapper > * {
+  z-index: 100;
   position: relative;
 }/*# sourceMappingURL=Home.css.map */

@@ -41,6 +41,7 @@ function Home() {
       },
     ],
   };
+  
   const [isSearchFocused, setIsSearchFocus] = useState(false);
 
   // const useOutsideClick = (callback) => {
